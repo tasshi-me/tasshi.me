@@ -1,5 +1,7 @@
 # tasshi.me
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f07a9e5c-64b7-459b-9ff4-ea62d1302510/deploy-status)](https://app.netlify.com/sites/tasshi/deploys)
+
 tasshi.me
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
