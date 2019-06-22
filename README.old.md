@@ -1,2 +1,0 @@
-# tasshi.me
-tasshi.me
