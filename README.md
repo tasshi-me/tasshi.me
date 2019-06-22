@@ -1,5 +1,6 @@
 # tasshi.me
 
+[![CircleCI](https://circleci.com/gh/mshrtsr/tasshi.me.svg?style=svg&circle-token=bf74b1e46a41d44edc2b86d908cc0e3b397aed7e)](https://circleci.com/gh/mshrtsr/tasshi.me)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f07a9e5c-64b7-459b-9ff4-ea62d1302510/deploy-status)](https://app.netlify.com/sites/tasshi/deploys)
 
 tasshi.me
