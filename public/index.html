@@ -1,8 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!-- namespace declaration -->
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <!-- define microdata scope and type -->
+  <head itemscope itemtype="http://schema.org/Article">
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- Begin OGP -->
+    <!-- define ogp and itemprop of microdata in one line -->
+    <meta property="og:title" itemprop="name" content="tasshi.me" />
+    <!-- define ogp image -->
+    <meta
+      property="og:image"
+      content="https://tasshi.me/favicons/icon-512x512.png"
+    />
+    <!-- use link[href] to define image url for microdata -->
+    <link itemprop="image" href="//tasshi.me/favicons/icon-512x512.png" />
+    <!-- define ogp and itemprop of microdata in one line -->
+    <meta property="og:url" content="https://tasshi.me/" />
+    <!-- define ogp type -->
+    <meta property="og:type" content="website" />
+
+    <!-- twitter -->
+    <!-- define twitter cards type -->
+    <meta name="twitter:card" content="summary" />
+    <!-- define site's owner twitter id -->
+    <meta name="twitter:site" content="@tasshi820" />
+
+    <!-- FaceBook -->
+    <meta property="fb:app_id" content="634298873720418" />
+
+    <!-- define description for ogp and itemprop of microdata in one line -->
+    <meta
+      property="og:description"
+      itemprop="description"
+      content="tasshiのポータルサイト"
+    />
+    <!-- general description (separate with ogp and microdata) -->
+    <meta name="description" content="tasshiのポータルサイト" />
+
+    <!-- End OGP -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!--
