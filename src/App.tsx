@@ -50,7 +50,7 @@ const App: React.FC = () => {
           </a>
         </div>
         <div>
-          <p>© 2019 tasshi All Rights Reserved.</p>
+          <p>© 2019-2020 tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
