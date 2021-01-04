@@ -6,7 +6,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>tasshi.me</h1>
-        <p>Masaharu TASHIRO | Web Developer</p>
+        <p>Masaharu TASHIRO | Software Engineer</p>
         <div className="App-links">
           <a
             className="App-link"
@@ -50,7 +50,7 @@ const App: React.FC = () => {
           </a>
         </div>
         <div>
-          <p>© 2019-2020 tasshi All Rights Reserved.</p>
+          <p>© 2019-2021 tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
