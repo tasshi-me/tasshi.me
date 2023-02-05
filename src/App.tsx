@@ -10,11 +10,11 @@ const App: React.FC = () => {
         <div className="App-links">
           <a
             className="App-link"
-            href="https://www.resume.id/tasshi"
+            href="https://linktr.ee/tasshi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            Linktree
           </a>
           <a
             className="App-link"
@@ -26,31 +26,15 @@ const App: React.FC = () => {
           </a>
           <a
             className="App-link"
-            href="https://tasshi.hatenablog.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            className="App-link"
             href="https://twitter.com/tasshi820"
             target="_blank"
             rel="noopener noreferrer"
           >
             Twitter
           </a>
-          <a
-            className="App-link"
-            href="https://qiita.com/tasshi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Qiita
-          </a>
         </div>
         <div>
-          <p>© 2019-2021 tasshi All Rights Reserved.</p>
+          <p>© 2019-2022 tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
