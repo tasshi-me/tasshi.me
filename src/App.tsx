@@ -34,7 +34,7 @@ const App: React.FC = () => {
           </a>
         </div>
         <div>
-          <p>© 2019-2022 tasshi All Rights Reserved.</p>
+          <p>© 2019-2023 tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
