@@ -32,9 +32,17 @@ const App: React.FC = () => {
           >
             Twitter
           </a>
+          <a
+            className="App-link"
+            href="https://lapras.com/public/tasshi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LAPRAS
+          </a>
         </div>
         <div>
-          <p>© 2019-2023 tasshi All Rights Reserved.</p>
+          <p>© 2019-2024 tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
