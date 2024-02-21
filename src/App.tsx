@@ -42,7 +42,7 @@ const App: React.FC = () => {
           </a>
         </div>
         <div>
-          <p>© 2019-${(new Date).getFullYear()} tasshi All Rights Reserved.</p>
+          <p>© 2019-{(new Date()).getFullYear()} tasshi All Rights Reserved.</p>
         </div>
       </header>
     </div>
