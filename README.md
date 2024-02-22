@@ -1,6 +1,6 @@
 # tasshi.me
 
-[![ci](https://github.com/mshrtsr/tasshi.me/actions/workflows/ci.yml/badge.svg)](https://github.com/mshrtsr/tasshi.me/actions/workflows/ci.yml)
+[![ci](https://github.com/tasshi-me/tasshi.me/actions/workflows/ci.yml/badge.svg)](https://github.com/tasshi-me/tasshi.me/actions/workflows/ci.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f07a9e5c-64b7-459b-9ff4-ea62d1302510/deploy-status)](https://app.netlify.com/sites/tasshi/deploys)
 
 tasshi.me

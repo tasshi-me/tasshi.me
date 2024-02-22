@@ -18,7 +18,7 @@ const App: React.FC = () => {
           </a>
           <a
             className="App-link"
-            href="https://github.com/mshrtsr"
+            href="https://github.com/tasshi-me"
             target="_blank"
             rel="noopener noreferrer"
           >
