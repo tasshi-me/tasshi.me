@@ -1,0 +1,49 @@
+---
+import type {HTMLAttributes} from "astro/types";
+import Card from "./Card.astro";
+
+type Props = {
+	color?: string
+	backgroundColor: string
+	size?: number
+	mobileSize?: number
+};
+
+const { ...props } = Astro.props as Props;
+
+const today = new Date();
+---
+
+<Card {...props}>
+	<div>
+		<p class="title">tasshi.me</p>
+		<p class="copyright">&copy; 2019-{today.getFullYear()} tasshi All rights reserved.</p>
+	</div>
+</Card>
+<style>
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	p {
+		font-weight: bold;
+		margin: 0;
+	}
+	p.title {
+		font-size: 5rem;
+	}
+	p.copyright {
+		font-size: 1.2rem;
+
+	}
+	@media (max-width: 800px) {
+		p.title {
+			font-size: 7rem;
+		}
+		p.copyright {
+			font-size: 2rem;
+		}
+	}
+</style>

@@ -1,51 +1,107 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Card from "../components/lp/Card.astro";
+import LinkCard from "../components/lp/LinkCard.astro";
+import TitleCard from "../components/lp/TitleCard.astro";
+import IconCard from "../components/lp/IconCard.astro";
+import LatestPostLinkCard from "../components/lp/LatestPostLinkCard.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Masaharu Tashiro</h1>
-			<h2>Software Engineer</h2>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+<main>
+	<div class="container">
+		<LinkCard class="card-about" label="ABOUT" href="/about" backgroundColor="#003575"></LinkCard>
+		<LinkCard class="card-posts" label="POSTS" href="/about" backgroundColor="#2F84A6"></LinkCard>
+		<LinkCard class="card-slides" label="SLIDES" href="/about" backgroundColor="#2F84A6"></LinkCard>
+		<LinkCard class="card-apps" label="APPS" href="/about" backgroundColor="#5C6DA6"></LinkCard>
+		<LinkCard class="card-timeline" label="TIMELINE" href="/about" backgroundColor="#0551A2"></LinkCard>
+		<TitleCard class="card-title" label="TASSHI.ME" href="/about" color="#0052B3" backgroundColor="#FFFFFF" size=2></TitleCard>
+		<LinkCard class="card-links" label="LINKS" href="/about" backgroundColor="#5C6DA6"></LinkCard>
+		<Card class="card-latest-post" backgroundColor="#0551A2">LATEST POST→</Card>
+		<LatestPostLinkCard class="card-latest-post-link" label="公開APIのインターフェースで利用している外部クレートはRe-exportする（と良さそう）" href="/about" backgroundColor="#8368A6" size=2 mobileSize=1></LatestPostLinkCard>
+		<IconCard class="card-icon" href="/about" backgroundColor="#003575"></IconCard>
+	</div>
+</main>
+</body>
 </html>
+<style>
+	html {
+		font-size: 1.2dvmin;
+		@media (max-width: 800px) {
+			font-size: 1.4dvmin;
+		}
+	}
+	body {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+
+		background: #050026;
+		//background: #002049;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	main {
+		width: 100vw;
+		max-width: 100vh;
+		height: 100dvh;
+		padding: 0;
+		background-color: inherit;
+
+		overflow: scroll;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 96dvmin;
+
+		@media (max-width: 800px) {
+			width: 100dvmin;
+			overflow: scroll;
+
+			.card-about{
+				order: 4;
+			}
+			.card-posts{
+				order: 5;
+			}
+			.card-slides{
+				display: none;
+			}
+			.card-apps{
+				order: 8;
+			}
+			.card-timeline{
+				order: 6;
+			}
+			.card-title{
+				order: 3;
+			}
+			.card-links{
+				order: 9;
+			}
+			.card-latest-post{
+				order: 1;
+			}
+			.card-latest-post-link{
+				order: 2;
+			}
+			.card-icon{
+				order: 7;
+			}
+		}
+	}
+</style>

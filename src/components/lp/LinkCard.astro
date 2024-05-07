@@ -1,0 +1,45 @@
+---
+import type {HTMLAttributes} from "astro/types";
+import Card from "./Card.astro";
+
+type Props = {
+	label: string
+	color?: string
+	backgroundColor: string
+	href: HTMLAttributes<"a">['href']
+	size?: number
+	mobileSize?: number
+};
+
+const { href, label, ...props } = Astro.props as Props;
+
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^\/]+/g);
+
+
+---
+
+<Card {...props}>
+	<a href={href}>{label}</a>
+</Card>
+<style>
+	a {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: inherit;
+		text-decoration: none;
+		//overflow: hidden;
+		position: relative;
+	}
+	a:hover {
+		mix-blend-mode: overlay;
+		background-color: white;
+		color: black
+	}
+</style>

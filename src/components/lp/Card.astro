@@ -1,0 +1,40 @@
+---
+type Props = {
+	color?: string
+	backgroundColor: string
+	size?: number
+  mobileSize?: number
+};
+
+const { color="white", backgroundColor,size = 1 ,mobileSize = size, class: className, ...props } = Astro.props as Props;
+
+---
+
+<div class:list={[className]}><slot /></div>
+<style define:vars={{ color, backgroundColor,size, mobileSize }}>
+	div {
+    color: var(--color);
+		background-color: var(--backgroundColor);
+    background-clip: content-box;
+		width: calc(24dvmin * var(--size));
+		height: 24dvmin;
+		border: solid 0.5dvmin transparent;
+		//border: solid 1px transparent;
+    box-sizing: border-box;
+
+    @media (max-width: 800px) {
+        width: calc(45dvmin * var(--mobileSize));
+        height: 30dvmin;
+        border-width: 0.6dvmin;
+    }
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    text-align: center;
+    text-wrap: wrap;
+
+    font-weight: bold;
+    font-size: 3rem;
+	}
+</style>
