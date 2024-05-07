@@ -1,0 +1,107 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Card from "../components/lp/Card.astro";
+import LinkCard from "../components/lp/LinkCard.astro";
+import TitleCard from "../components/lp/TitleCard.astro";
+import IconCard from "../components/lp/IconCard.astro";
+import LatestPostLinkCard from "../components/lp/LatestPostLinkCard.astro";
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+<main>
+	<div class="container">
+		<LinkCard class="card-about" label="ABOUT" href="/about" backgroundColor="#003575"></LinkCard>
+		<LinkCard class="card-posts" label="POSTS" href="/about" backgroundColor="#2F84A6"></LinkCard>
+		<LinkCard class="card-slides" label="SLIDES" href="/about" backgroundColor="#2F84A6"></LinkCard>
+		<LinkCard class="card-apps" label="APPS" href="/about" backgroundColor="#5C6DA6"></LinkCard>
+		<LinkCard class="card-timeline" label="TIMELINE" href="/about" backgroundColor="#0551A2"></LinkCard>
+		<TitleCard class="card-title" label="TASSHI.ME" href="/about" color="#0052B3" backgroundColor="#FFFFFF" size=2></TitleCard>
+		<LinkCard class="card-links" label="LINKS" href="/about" backgroundColor="#5C6DA6"></LinkCard>
+		<Card class="card-latest-post" backgroundColor="#0551A2">LATEST POST→</Card>
+		<LatestPostLinkCard class="card-latest-post-link" label="公開APIのインターフェースで利用している外部クレートはRe-exportする（と良さそう）" href="/about" backgroundColor="#8368A6" size=2 mobileSize=1></LatestPostLinkCard>
+		<IconCard class="card-icon" href="/about" backgroundColor="#003575"></IconCard>
+	</div>
+</main>
+</body>
+</html>
+<style>
+	html {
+		font-size: 1.2dvmin;
+		@media (max-width: 800px) {
+			font-size: 1.4dvmin;
+		}
+	}
+	body {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+
+		background: #050026;
+		//background: #002049;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	main {
+		width: 100vw;
+		max-width: 100vh;
+		height: 100dvh;
+		padding: 0;
+		background-color: inherit;
+
+		overflow: scroll;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 96dvmin;
+
+		@media (max-width: 800px) {
+			width: 100dvmin;
+			overflow: scroll;
+
+			.card-about{
+				order: 4;
+			}
+			.card-posts{
+				order: 5;
+			}
+			.card-slides{
+				display: none;
+			}
+			.card-apps{
+				order: 8;
+			}
+			.card-timeline{
+				order: 6;
+			}
+			.card-title{
+				order: 3;
+			}
+			.card-links{
+				order: 9;
+			}
+			.card-latest-post{
+				order: 1;
+			}
+			.card-latest-post-link{
+				order: 2;
+			}
+			.card-icon{
+				order: 7;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,27 @@
+---
+import type {HTMLAttributes} from "astro/types";
+import Card from "./Card.astro";
+
+type Props = {
+	backgroundColor: string
+	size?: number,
+	mobileSize?: number,
+};
+
+const image = "/favicons/android-chrome-512x512.png"
+
+const { ...props } = Astro.props as Props;
+---
+
+<Card {...props}>
+	<img alt="icon" src={image}>
+</Card>
+<style>
+	img {
+		width: auto;
+		height: 100%;
+		//mix-blend-mode: hard-light;
+		//background-color: rgba(1,1,1,0.2);
+		border-radius: 100%;
+	}
+</style>
